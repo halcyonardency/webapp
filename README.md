@@ -15,6 +15,6 @@ docker build --build-arg API_KEY=`uuidgen` --network host --rm -t webapp:0.1.0 w
 ```
 ### Deploy app
 ```
-docker run --network bridge --privileged --name webapp -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 0.0.0.0:3000:3000  -d webapp:0.1.0
+sudo docker run --network bridge --privileged --name webapp -v /sys/fs/cgroup:/sys/fs/cgroup:ro -p 0.0.0.0:80:3000  -d webapp:0.1.0
 ```
-## Access app at http://host:3000
+## Access app at http://host
